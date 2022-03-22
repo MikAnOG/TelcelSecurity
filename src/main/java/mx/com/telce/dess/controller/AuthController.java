@@ -66,11 +66,11 @@ public class AuthController {
 			return ResponseEntity.ok(new AuthenticationResponse("Error durante la autenticacion del usuario " + nombre));
 		}
 		
-		UserDetails loadUser = usuarioService.loadUserByUsername(nombre);
+//		UserDetails loadUser = usuarioService.loadUserByUsername(nombre);
+//		
+//		String generatedToken = jwtUtil.generateToken(loadUser);
 		
-		String generatedToken  = jwtUtil.generateToken(loadUser);
-		
-		return ResponseEntity.ok(new AuthenticationResponse(generatedToken));
+		return ResponseEntity.ok(new AuthenticationResponse("Usuario autenticado: " + nombre  /*generatedToken*/));
 		
 	}
 }
