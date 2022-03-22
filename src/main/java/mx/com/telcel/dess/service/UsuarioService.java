@@ -1,4 +1,4 @@
-package mx.com.telce.dess.service;
+package mx.com.telcel.dess.service;
 
 import java.util.ArrayList;
 
@@ -9,8 +9,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import mx.com.telce.dess.model.Usuario;
-import mx.com.telce.dess.repository.UsuarioRepository;
+import mx.com.telcel.dess.model.Usuario;
+import mx.com.telcel.dess.repository.UsuarioRepository;
 
 
 @Service

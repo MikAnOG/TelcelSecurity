@@ -1,4 +1,4 @@
-package mx.com.telce.dess.model;
+package mx.com.telcel.dess.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

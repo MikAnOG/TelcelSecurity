@@ -1,4 +1,4 @@
-package mx.com.telce.dess.utils;
+package mx.com.telcel.dess.utils;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;

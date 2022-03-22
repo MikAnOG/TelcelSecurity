@@ -1,4 +1,4 @@
-package mx.com.telce.dess.configuration;
+package mx.com.telcel.dess.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -13,8 +13,8 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import mx.com.telce.dess.service.JwtFiltro;
-import mx.com.telce.dess.service.UsuarioService;
+import mx.com.telcel.dess.service.JwtFiltro;
+import mx.com.telcel.dess.service.UsuarioService;
 
 
 @EnableWebSecurity

@@ -1,4 +1,4 @@
-package mx.com.telce.dess.service;
+package mx.com.telcel.dess.service;
 
 import java.io.IOException;
 
@@ -15,7 +15,7 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import mx.com.telce.dess.utils.JwtUtil;
+import mx.com.telcel.dess.utils.JwtUtil;
 
 
 @Component

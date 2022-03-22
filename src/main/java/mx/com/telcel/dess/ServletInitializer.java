@@ -1,4 +1,4 @@
-package mx.com.telce.dess;
+package mx.com.telcel.dess;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

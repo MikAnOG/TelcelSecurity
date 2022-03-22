@@ -1,4 +1,4 @@
-package mx.com.telce.dess.model;
+package mx.com.telcel.dess.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,8 +7,9 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class AuthenticationResponse {
+public class AuthenticationRequest {
 	
-	private String respuesta;
+	private String nombre;
+	private String password;
 
 }

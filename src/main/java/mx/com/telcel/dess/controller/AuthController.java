@@ -1,4 +1,4 @@
-package mx.com.telce.dess.controller;
+package mx.com.telcel.dess.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import mx.com.telce.dess.model.AuthenticationRequest;
-import mx.com.telce.dess.model.AuthenticationResponse;
-import mx.com.telce.dess.model.Usuario;
-import mx.com.telce.dess.repository.UsuarioRepository;
-import mx.com.telce.dess.service.UsuarioService;
-import mx.com.telce.dess.utils.JwtUtil;
+import mx.com.telcel.dess.model.AuthenticationRequest;
+import mx.com.telcel.dess.model.AuthenticationResponse;
+import mx.com.telcel.dess.model.Usuario;
+import mx.com.telcel.dess.repository.UsuarioRepository;
+import mx.com.telcel.dess.service.UsuarioService;
+import mx.com.telcel.dess.utils.JwtUtil;
 
 
 @RestController

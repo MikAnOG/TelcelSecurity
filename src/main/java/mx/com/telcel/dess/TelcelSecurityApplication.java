@@ -1,4 +1,4 @@
-package mx.com.telce.dess;
+package mx.com.telcel.dess;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
