@@ -15,7 +15,9 @@ import java.util.function.Function;
 @Service
 public class JwtUtil{
     
-	private static final String SECRET_KEY = "secret";
+	private String SECRET_KEY = "simple";
+	
+	public static final long JWT_TOKEN_VALIDITY = 10 * 60 * 60;
 	
     public String generateToken(UserDetails userDetails) {
         Map<String, Object> claims = new HashMap<>();
@@ -24,15 +26,13 @@ public class JwtUtil{
     
     public Boolean validateToken(String token, UserDetails userDetails) {
         String username = extractUsername(token);
-        return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
+        return username.equals(userDetails.getUsername()) && !isTokenExpired(token);//OJO <------------
     }
     
     private String createToken(Map<String, Object> claims, String subject) {
-    	Date now = new Date(System.currentTimeMillis());
-    	Date util = new Date(System.currentTimeMillis() + 1000 * 60);
     	
-        return Jwts.builder().setClaims(claims).setSubject(subject).setIssuedAt(now)
-                .setExpiration(util)
+        return Jwts.builder().setClaims(claims).setSubject(subject).setIssuedAt(new Date(System.currentTimeMillis()))
+                .setExpiration(new Date(System.currentTimeMillis() + JWT_TOKEN_VALIDITY * 1000))
                 .signWith(SignatureAlgorithm.HS256, SECRET_KEY).compact();
     }
     
