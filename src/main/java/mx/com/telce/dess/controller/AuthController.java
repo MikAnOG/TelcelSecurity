@@ -1,12 +1,16 @@
 package mx.com.telce.dess.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.validation.BindingResult;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +21,7 @@ import mx.com.telce.dess.model.Usuario;
 import mx.com.telce.dess.repository.UsuarioRepository;
 import mx.com.telce.dess.service.UsuarioService;
 import mx.com.telce.dess.utils.JwtUtil;
+import mx.com.telce.dss.validatorpwd.ValidPassword;
 
 
 @RestController
@@ -49,6 +54,7 @@ public class AuthController {
 		
 		try {
 			usuarioRepository.save(usuario);
+			
 		} catch (Exception ex) {
 			return ResponseEntity.ok(new AuthenticationResponse("Error durante el registro de usuario " + nombre));
 		}
@@ -73,4 +79,5 @@ public class AuthController {
 		return ResponseEntity.ok(new AuthenticationResponse(generatedToken));
 		
 	}
+	
 }
